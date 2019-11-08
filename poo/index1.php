@@ -34,13 +34,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../IMG/adidas.jpg" class="d-block w-100" alt="...">
+          <img src="IMG/adidas.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../IMG/reebok.jpg" class="d-block w-100 " alt="...">
+          <img src="IMG/reebok.jpg" class="d-block w-100 " alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../IMG/nike.jpg" class="d-block w-100" alt="...">
+          <img src="IMG/nike.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
@@ -61,7 +61,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/azules.png" alt="adidas">
+        <img class="d-block w-100"src="IMG/azules.png" alt="adidas">
         <h4><strong>Adidas</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -69,7 +69,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/basquet.png" alt="nike">
+        <img class="d-block w-100"src="IMG/basquet.png" alt="nike">
         <h4><strong>Nike</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -77,7 +77,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php" >
-        <img class="d-block w-100"src="../IMG/fila.png" alt="reebok">
+        <img class="d-block w-100"src="IMG/fila.png" alt="reebok">
         <h4><strong>Reebok</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -85,7 +85,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/gris.png" alt="adidas">
+        <img class="d-block w-100"src="IMG/gris.png" alt="adidas">
         <h4 class="color:black"><strong>Adidas</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -93,7 +93,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/vans.png" alt="nike">
+        <img class="d-block w-100"src="IMG/vans.png" alt="nike">
         <h4><strong>Nike</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -101,14 +101,14 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/swish.png" alt="reebok">
+        <img class="d-block w-100"src="IMG/swish.png" alt="reebok">
         <h4><strong>Reebok</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
       </article>
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/fila.png" alt="adidas">
+        <img class="d-block w-100"src="IMG/fila.png" alt="adidas">
         <h4><strong>Adidas</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -116,7 +116,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/vans.png" alt="nike">
+        <img class="d-block w-100"src="IMG/vans.png" alt="nike">
         <h4><strong>Nike</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -124,7 +124,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php" >
-        <img class="d-block w-100"src="../IMG/fila.png" alt="reebok">
+        <img class="d-block w-100"src="IMG/fila.png" alt="reebok">
         <h4><strong>Reebok</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -132,7 +132,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/swish.png" alt="adidas">
+        <img class="d-block w-100"src="IMG/swish.png" alt="adidas">
         <h4 class="color:black"><strong>Adidas</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -140,7 +140,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/basquet.png" alt="nike">
+        <img class="d-block w-100"src="IMG/basquet.png" alt="nike">
         <h4><strong>Nike</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -148,14 +148,14 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/swish.png" alt="reebok">
+        <img class="d-block w-100"src="IMG/swish.png" alt="reebok">
         <h4><strong>Reebok</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
       </article>
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/vans.png" alt="adidas">
+        <img class="d-block w-100"src="IMG/vans.png" alt="adidas">
         <h4><strong>Adidas</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -163,7 +163,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/basquet.png" alt="nike">
+        <img class="d-block w-100"src="IMG/basquet.png" alt="nike">
         <h4><strong>Nike</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -171,7 +171,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php" >
-        <img class="d-block w-100"src="../IMG/azules.png" alt="reebok">
+        <img class="d-block w-100"src="IMG/azules.png" alt="reebok">
         <h4><strong>Reebok</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -179,7 +179,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/gris.png" alt="adidas">
+        <img class="d-block w-100"src="IMG/gris.png" alt="adidas">
         <h4 class="color:black"><strong>Adidas</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -187,7 +187,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/swish.png" alt="nike">
+        <img class="d-block w-100"src="IMG/swish.png" alt="nike">
         <h4><strong>Nike</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>
@@ -195,7 +195,7 @@
 
       <article class="_producto col-sm-6 col-md-3 col-lg-2">
       <a href="producto.php">
-        <img class="d-block w-100"src="../IMG/vans.png" alt="reebok">
+        <img class="d-block w-100"src="IMG/vans.png" alt="reebok">
         <h4><strong>Reebok</strong></h4>
         <p>Lorem ipsum dolor sit amet.</p>
       </a>

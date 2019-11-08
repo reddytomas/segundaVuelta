@@ -1,6 +1,7 @@
 <?php
 class Validador{
     //Aquí comienzo a programar las funciones generales de mi sistema
+  
     public function validar($usuario){
         //Este representa mi array donde voy a ir almacenando los errores, que luego muestro en la vista al usuario.|
         $errores = [];
@@ -30,12 +31,12 @@ class Validador{
             $ext = pathinfo($nombre,PATHINFO_EXTENSION);
             if($imagen['avatar']['error']!=0){
                 $errores['avatar']="Debes subir tu foto...";
-        
+
             }elseif ($ext != "jpg" && $ext != "png") {
                 $errores['avatar']="Formato inválido";
-            }        
+            }
         }
-        return $errores;   
+        return $errores;
     }
 
 }

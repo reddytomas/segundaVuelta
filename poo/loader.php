@@ -11,3 +11,4 @@ require_once("clases/encriptador.php");
 $validarUsuario = new Validador();
 $json = new BaseJson("usuarios.json");
 $registro = new armador();
+$bd = 

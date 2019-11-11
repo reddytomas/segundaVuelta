@@ -7,7 +7,7 @@
               $consulta->guardarProducto($bd,'marca',$pelicula);
           }
       }
-      $generos = $consulta->listarGeneros($bd,'genres'); ******** aca nose de donde saco listarGeneros dani...
+      $generos = $consulta->listarUsuarios($bd,'usuarios');
   ?>
   <!DOCTYPE html>
   <html lang="es">
@@ -53,13 +53,13 @@
                           <label for="precioProducto">Precio</label>
                           <input type="date" class="form-control" name="precio" id="precio">
                       </div>
-                      
+
                       <div class="form-group">
-                          <label for="generos">Género de la Película</label>
-                          <select class="form-control" name="genre_id" id="generos">
-                              <option value="#" disabled >Seleccione género...</option>
-                              <?php foreach ($generos as $key => $value) :?>
-                                  <option value="<?=$value['id'] ;?>"><?=$value['name'] ;?></option>
+                          <label for="usuarios">Usuarios</label>
+                          <select class="form-control" name="usuario_id" id="usuarios">
+                              <option value="#" disabled >Seleccione usuario...</option>
+                              <?php foreach ($usuarios as $key => $value) :?>
+                                  <option value="<?=$value['id'] ;?>"><?=$value['nombre'] ;?></option>
                               <?php endforeach;?>
                           </select>
                       </div>

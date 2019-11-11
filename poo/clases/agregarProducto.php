@@ -1,6 +1,4 @@
-<?php
- class agregarProducto{
-    public function agregarProducto();
-    public function eliminarProducto();
-    public function editarProducto();
-}
+<?php class agregarProducto{
+  public function agregarProducto();
+  public function eliminarProducto();
+  public function editarProducto(); }

@@ -48,8 +48,8 @@ class Consulta{
         return $productos;
     }
     //Este método controla el borrado de la película que el usuario selecione
-    public function borrarProducto($bd,$movies,$id){
-        $sql = "delete from $movies where id = :id";
+    public function borrarProducto($bd,$productos,$id){
+        $sql = "delete from $productos where id = :id";
         $query = $bd->prepare($sql);
         $query->bindvalue(':id',$id);
         $query->execute();

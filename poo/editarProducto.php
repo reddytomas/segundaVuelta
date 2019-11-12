@@ -11,7 +11,7 @@
     }
   }
   //Aquí genero el listado de los generos, para luego usarlos en el select - option del formulario y de esa forma lograr mostrar los generos para que el usuario seleccione el que desee
-  $usuarios = $consulta->listarUsuarios($bd,'usuarios'); *******
+  $usuarios = $consulta->listarUsuarios($bd,'usuarios');
   //En la variable $movie incorporo los datos de la película que el usuario desea modificar
   $producto = $consulta->detalleProducto($bd,'productos','usuarios',$_GET['id']);
 
@@ -32,7 +32,7 @@
     <body>
 
         <?php require 'parciales/header.php' ?>
-        <?php require 'parciales/footer.php' ?>
+
         <div class="spacer"></div>
         <h2 class="text-center">Editar Producto</h2>
        <div class="row mt-5">
@@ -56,9 +56,12 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Actualizar Producto</button>
                 </form>
-                <a href="index1.php" class="btn btn-danger">Volver</a>
+                <a href="crud.php" class="btn btn-danger">Volver</a>
             </div>
         </div>
+        <br>
+
+        <?php require 'parciales/footer.php' ?>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

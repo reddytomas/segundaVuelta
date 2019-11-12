@@ -5,6 +5,7 @@ require_once('clases/validador.php');
 require_once('clases/baseDato.php');
 require_once('clases/baseJson.php');
 require_once("clases/armador.php");
+require_once("clases/Consulta.php");
 require_once("clases/encriptador.php");
 
 

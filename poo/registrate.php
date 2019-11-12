@@ -3,22 +3,25 @@
   require_once("loader.php");
   require_once("helpers.php");
   if($_POST){
-   $usuario  = new Usuario($_POST['userName'],$_POST['email'],$_POST['password'],$_POST['passwordRepeat'], $_FILES);
-
+    //primer paso - entra el post del usuario y crea la clase.
+   $usuario  = new Usuario($_POST['nombre'],$_POST['apellido'],$_POST['userName'],$_POST['email'],$_POST['password'],$_POST['passwordRepeat'], $_FILES);
+   //segundo paso - la clase se valida con el llamado a la clase validador con sus metodos
    $errores = $validarUsuario->validar($usuario);
+   //tercer - paso - si no hay errores, se fija en la base jason si encuentra el mail. Si el mail llega a ser igual a "nulo" se arma el registro con el $registro con el $_POST y el $avatar.
    if(count($errores)==0){
     $usuarioEncontrado = $json->buscar($usuario->getEmail());
-    if($usuario !== null){
-      $errores["email"]="Usuario ya registrado";
-    }else{
+    if($usuario = null){
       $avatar = $registro->armarAvatar($usuario->getAvatar());
       $registro = armarRegistro($_POST,$avatar);
       guardarRegistro($registro);
-     //De no excistir errores en la información tipeada por el usuario entonces lo redirecciono a donde yo desee.
+    }else{
+      //si no es igual a nulo te devuelve este mensaje
+      $errores["email"]="usted ya es un usuario";
 
+      }
       header("location:login.php");
       exit;
-    }
+
 
   }
 }

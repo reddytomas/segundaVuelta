@@ -1,9 +1,9 @@
 <?php
 class Validador{
-    //Aquí comienzo a programar las funciones generales de mi sistema
+    //valida los datos ingresado por post.
 
     public function validar($usuario){
-        //Este representa mi array donde voy a ir almacenando los errores, que luego muestro en la vista al usuario.|
+        //array de errores, se los muestro al usuario.|
         $errores = [];
         $userName = trim($usuario->getUserName());
         if(empty($userName )){

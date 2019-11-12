@@ -40,12 +40,12 @@ class Consulta{
     }
     //Este es el método que controla la busqueda de las películas
     public function buscarProducto($bd,$tabla,$busqueda){
-        $sql = "select * from $tabla where title like :busqueda";
+        $sql = "select * from $tabla where marca like :busqueda";
         $query = $bd->prepare($sql);
         $query->bindValue(':busqueda',"%".$busqueda."%");
         $query->execute();
-        $peliculas = $query->fetchAll(PDO::FETCH_ASSOC);
-        return $peliculas;
+        $productos = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $productos;
     }
     //Este método controla el borrado de la película que el usuario selecione
     public function borrarProducto($bd,$movies,$id){

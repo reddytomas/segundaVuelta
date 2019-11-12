@@ -30,13 +30,13 @@ class Consulta{
         header('location:index.php');
     }
     //Este método muestra el detalle de una película selecciona de la lista por parte del usuario
-    public function detalleProducto($bd,$movies,$genres,$id){
-        $sql = "select $movies.*,$genres.name from $movies,$genres where $movies.genre_id =$genres.id and $movies.id = $id";
+    public function detalleProducto($bd,$productos,$usuarios,$id){
+        $sql = "select $productos.*,$usuarios.nombre from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
         $query = $bd->prepare($sql);
         $query->execute();
-        $pelicula = $query->fetch(PDO::FETCH_ASSOC);
+        $productos = $query->fetch(PDO::FETCH_ASSOC);
 
-        return $pelicula;
+        return $productos;
     }
     //Este es el método que controla la busqueda de las películas
     public function buscarProducto($bd,$tabla,$busqueda){

@@ -37,5 +37,4 @@ class Producto{
       $this->precio = $precio;
   }
 }
-
  ?>

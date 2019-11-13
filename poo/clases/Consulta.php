@@ -39,7 +39,7 @@ class Consulta{
         return $productos;
     }
     //Este es el método que controla la busqueda de las películas
-    public function buscarProducto($bd,$tabla,$busqueda){
+    public function buscarProductos($bd,$tabla,$busqueda){
         $sql = "select * from $tabla where marca like :busqueda";
         $query = $bd->prepare($sql);
         $query->bindValue(':busqueda',"%".$busqueda."%");

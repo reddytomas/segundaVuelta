@@ -31,7 +31,7 @@ class Consulta{
     }
     //Este método muestra el detalle de una película selecciona de la lista por parte del usuario
     public function detalleProducto($bd,$productos,$usuarios,$id){
-        $sql = "select $productos.*,$usuarios.nombre from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
+        $sql = "select $productos.*,$productos.marca from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
         $query = $bd->prepare($sql);
         $query->execute();
         $productos = $query->fetch(PDO::FETCH_ASSOC);
@@ -55,8 +55,8 @@ class Consulta{
         $query->execute();
     }
     //Método para realizar la edición o modificación de los datos de alguna película
-    public function actualizarProducto($bd,$movies,$pelicula,$id){
-        $sql = "update $movies set title=:title,rating=:rating,awards=:awards,release_date=:release_date, length=:length,genre_id=:genre_id where $movies.id=$id";
+    public function actualizarProducto($bd,$productos,$id){
+        $sql = "update $productos set marca=:marca,categoria=:categoria,talle=:talle,precio=:precio,usuarios_id=:usuarios_id where $productos.id=$id";
         $query = $bd->prepare($sql);
         $query->bindValue(':title',$pelicula->getTitle());
         $query->bindValue(':rating',$pelicula->getRating());

@@ -57,8 +57,8 @@ class Usuario{
     public function setpasswordRepeat($passwordRepeat){
         $this->passwordRepeat = $passwordRepeat;
     }
-    public function setAvatar($passwordRepeat){
-        $this->passwordRepeat = $passwordRepeat;
+    public function setAvatar($avatar){
+        $this->avatar = $avatar;
     }
 
 

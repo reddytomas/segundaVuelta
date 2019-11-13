@@ -2,28 +2,43 @@
   //Esto hace que veamos las funciones creadas
   require_once("loader.php");
   require_once("helpers.php");
+  require_once("controladores/funciones.php");
   if($_POST){
-    //primer paso - entra el post del usuario y crea la clase.
-   $usuario  = new Usuario($_POST['nombre'],$_POST['apellido'],$_POST['userName'],$_POST['email'],$_POST['password'],$_POST['passwordRepeat'], $_FILES);
-   //segundo paso - la clase se valida con el llamado a la clase validador con sus metodos
-   $errores = $validarUsuario->validar($usuario);
-   //tercer - paso - si no hay errores, se fija en la base jason si encuentra el mail. Si el mail llega a ser igual a "nulo" se arma el registro con el $registro con el $_POST y el $avatar.
+
+    $errores = validar($_POST,$_FILES);
    if(count($errores)==0){
-    $usuarioEncontrado = $json->buscar($usuario->getEmail());
-    if($usuario = null){
-      $avatar = $registro->armarAvatar($usuario->getAvatar());
-      $registro = armarRegistro($_POST,$avatar);
-      guardarRegistro($registro);
-    }else{
-      //si no es igual a nulo te devuelve este mensaje
-      $errores["email"]="usted ya es un usuario";
+     $avatar = armarAvatar($_FILES);
+     $registro = armarRegistro($_POST,$avatar);
+     guardarRegistro($registro);
 
-      }
-      header("location:login.php");
-      exit;
-
-
+     //De n o excistir errores en la información tipeada por el usuario entonces lo redirecciono a donde yo desee.
+     header("location:login.php");
+   }
   }
+?>
+
+//de aca borre esto if($_POST){
+  //primer paso - entra el post del usuario y crea la clase.
+ $usuario  = new Usuario($_POST['nombre'],$_POST['apellido'],$_POST['userName'],$_POST['email'],$_POST['password'],$_POST['passwordRepeat'], $_FILES);
+ //segundo paso - la clase se valida con el llamado a la clase validador con sus metodos
+ $errores = $validarUsuario->validar($usuario);
+ //tercer - paso - si no hay errores, se fija en la base jason si encuentra el mail. Si el mail llega a ser igual a "nulo" se arma el registro con el $registro con el $_POST y el $avatar.
+ if(count($errores)==0){
+  $usuarioEncontrado = $json->buscar($usuario->getEmail());
+  if($usuario = null){
+    $avatar = $registro->armarAvatar($usuario->getAvatar());
+    $registro = armarRegistro($_POST,$avatar);
+    guardarRegistro($registro);
+  }else{
+    //si no es igual a nulo te devuelve este mensaje
+    $errores["email"]="usted ya es un usuario";
+
+    }
+    header("location:login.php");
+    exit;
+
+
+}
 }
 ?>
 

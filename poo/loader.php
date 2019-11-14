@@ -9,6 +9,7 @@ require_once("clases/Consulta.php");
 require_once("clases/encriptador.php");
 require_once("clases/basemysql.php");
 require_once("clases/validarProducto.php");
+require_once("clases/Producto.php");
 
 
 $validarUsuario = new Validador();

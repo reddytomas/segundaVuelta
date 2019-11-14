@@ -1,6 +1,7 @@
 <?php
   require_once('loader.php');
   require_once('controladores/funciones.php');
+  require_once("clases/Consulta.php");
   //Esta condición la cree para controlar si debo listar las películas en función de lo que usuario quiere ver por medio de consultar o simplemente cuando carga la página
   if ($_GET && !empty(trim('busqueda'))){
     $productos = $consulta->buscarProductos($bd,'productos',$_GET['busqueda']);

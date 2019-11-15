@@ -18,7 +18,7 @@ class Consulta{
     }
     //Método para agregar una nueva película
     public function guardarProducto($bd,$movies,$pelicula){
-        $sql = "insert into $movies (title,rating,awards,release_date,length,genre_id) values (:title,:rating,:awards,:release_date,:length,:genre_id)";
+        $sql = "insert into $productos (title,rating,awards,release_date,length,genre_id) values (:title,:rating,:awards,:release_date,:length,:genre_id)";
         $query = $bd->prepare($sql);
         $query->bindValue(':title',$pelicula->getTitle());
         $query->bindValue(':rating',$pelicula->getRating());

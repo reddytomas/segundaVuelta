@@ -17,23 +17,23 @@ class Consulta{
         return $usuarios;
     }
     //Método para agregar una nueva película
-    public function guardarProducto($bd,$movies,$pelicula){
-        $sql = "insert into $productos (title,rating,awards,release_date,length,genre_id) values (:title,:rating,:awards,:release_date,:length,:genre_id)";
+    public function guardarProducto($bd,$productos,$usuarios){
+        $sql = "insert into $productos (id,marca,categoria,talle,precio, usuarios_id) values (:id,:marca,:categoria,:talle,:precio,:usuarios_id)";
         $query = $bd->prepare($sql);
-        $query->bindValue(':title',$pelicula->getTitle());
-        $query->bindValue(':rating',$pelicula->getRating());
-        $query->bindValue(':awards',$pelicula->getAwards());
-        $query->bindValue(':release_date',$pelicula->getReleaseDate());
-        $query->bindValue(':length',$pelicula->getLength());
-        $query->bindValue(':genre_id',$pelicula->getGenre());
+        $query->bindValue(':id',$pelicula->getId());
+        $query->bindValue(':marca',$pelicula->getMarca());
+        $query->bindValue(':categoria',$pelicula->getCategoria());
+        $query->bindValue(':talle',$pelicula->getTalle());
+        $query->bindValue(':precio',$pelicula->getPrecio());
+        $query->bindValue(':usuarios_id',$pelicula->getUsuarios_id());
         $query->execute();
-        header('location:index.php');
+        header('location:index1.php');
     }
     //Este método muestra el detalle de una película selecciona de la lista por parte del usuario
     public function detalleProducto($bd,$productos,$usuarios,$id){
-        $sql = "select $productos.*,$productos.marca from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
+        $sql = "select $productos.*,$productos.productos from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
         $query = $bd->prepare($sql);
-        $query->execute($sql);
+        $query->execute();
         $productos = $query->fetch(PDO::FETCH_ASSOC);
 
         return $productos;

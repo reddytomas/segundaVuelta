@@ -2,7 +2,7 @@
 class BaseMysql{
     static public function conexion(){
         try {
-            $dsn = "mysql:host=localhost;dbname=Altas Llantas;port=8889;charset=utf8mb4";
+            $dsn = "mysql:host=localhost;dbname=AltasLlantas;port=8889;charset=utf8mb4";
             $usuario = "root";
             $password = "root";
             $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];

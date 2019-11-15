@@ -33,7 +33,7 @@ class Consulta{
     public function detalleProducto($bd,$productos,$usuarios,$id){
         $sql = "select $productos.*,$productos.marca from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
         $query = $bd->prepare($sql);
-        $query->execute();
+        $query->execute($sql);
         $productos = $query->fetch(PDO::FETCH_ASSOC);
 
         return $productos;

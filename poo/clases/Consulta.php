@@ -58,12 +58,12 @@ class Consulta{
     public function actualizarProducto($bd,$productos,$id){
         $sql = "update $productos set marca=:marca,categoria=:categoria,talle=:talle,precio=:precio,usuarios_id=:usuarios_id where $productos.id=$id";
         $query = $bd->prepare($sql);
-        $query->bindValue(':title',$pelicula->getTitle());
-        $query->bindValue(':rating',$pelicula->getRating());
-        $query->bindValue(':awards',$pelicula->getAwards());
-        $query->bindValue(':release_date',$pelicula->getReleaseDate());
-        $query->bindValue(':length',$pelicula->getLength());
-        $query->bindValue(':genre_id',$pelicula->getGenre());
+        $query->bindValue(':id',$pelicula->getId());
+        $query->bindValue(':marca',$pelicula->getMarca());
+        $query->bindValue(':categoria',$pelicula->getCategoria());
+        $query->bindValue(':talle',$pelicula->getTalle());
+        $query->bindValue(':precio',$pelicula->getPrecio());
+        $query->bindValue(':usuarios_id',$pelicula->getUsuarios_id());
         $query->execute();
         header('location:index.php');
       }

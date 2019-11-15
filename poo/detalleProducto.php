@@ -1,6 +1,6 @@
 <?php
 require_once('loader.php');
-$producto = $consulta->detalleProducto($bd,'marca','usuarios',$_GET['id']);
+$producto = $consulta->detalleProducto($bd,'productos','usuarios',$_GET['id']);
 ?>
 
 <!DOCTYPE html>

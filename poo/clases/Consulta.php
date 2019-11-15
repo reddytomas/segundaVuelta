@@ -31,11 +31,10 @@ class Consulta{
     }
     //Este método muestra el detalle de una película selecciona de la lista por parte del usuario
     public function detalleProducto($bd,$productos,$usuarios,$id){
-        $sql = "select $productos.*,$productos.productos from $productos,$usuarios where $productos.usuarios_id =$usuarios.id and $productos.id = $id";
+        $sql = "select $productos. * ,$productos.marca from $productos,$usuarios where $productos.usuarios_id LIKE $usuarios.id and $productos.id LIKE $id";
         $query = $bd->prepare($sql);
         $query->execute();
         $productos = $query->fetch(PDO::FETCH_ASSOC);
-
         return $productos;
     }
     //Este es el método que controla la busqueda de las películas
